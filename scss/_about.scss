@@ -53,7 +53,7 @@
     }
 
     a {
-        @include mixins.a-links;
+        @include mixins.arrows;
         color: black;
     }
 }

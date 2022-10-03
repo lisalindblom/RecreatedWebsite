@@ -43,11 +43,13 @@
     
     .arrow {
         
-        justify-self: flex-end;
+        
         align-self:center;
         height: 5vh;
+
         a {
-            @include mixins.a-links;
+            @include mixins.arrows;
+            color: white;
         }
        
     }
