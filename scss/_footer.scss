@@ -1,0 +1,23 @@
+@use "mixins";
+
+footer {
+
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 1.4em;
+
+    div {
+        margin: 10px;
+        width: 70%;
+
+        p {
+            margin: 5px;
+        }
+    }
+
+    
+}

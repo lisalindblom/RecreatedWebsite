@@ -1,0 +1,144 @@
+@charset "UTF-8";
+.start {
+  background-image: url("/assets/forest.jpg");
+  background-color: darkolivegreen; /* backup om bild ej tillgänglig*/
+  background-position: center, bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+.start nav {
+  background-color: rgba(250, 235, 215, 0.43);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .start nav {
+    flex-direction: row;
+  }
+}
+.start nav a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: white;
+}
+.start .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 1.7em;
+  width: 85%;
+  height: 35vh;
+}
+.start .text h2 {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.start .arrow {
+  justify-self: flex-end;
+  align-self: center;
+  height: 5vh;
+}
+.start .arrow a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: white;
+}
+
+/*nav {
+    background-color: rgba(250, 235, 215, 0.175);
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    align-items: center;
+    justify-self: flex-start;
+    a {
+        text-decoration: none;
+        font-size: 1.5em ;    
+        color: white;
+        padding: 2%;
+    }
+}*/
+#om {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  #om {
+    flex-direction: row;
+  }
+}
+#om h2 {
+  font-weight: bold;
+  font-size: 1.3em;
+  /* Blir fel font-size*/
+  margin: 20px;
+}
+#om .personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#om .personal h5 {
+  font-weight: bold;
+}
+#om .personal img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.582);
+  width: 50%;
+  margin: 20px;
+}
+#om .personal p {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(160, 159, 159, 0.526);
+  width: 80%;
+  padding: 20px;
+  border-radius: 5px;
+}
+#om .personal p i {
+  transform: rotate(180deg);
+  align-self: flex-start;
+  font-size: 3.5em;
+}
+#om a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: white;
+  color: black;
+}
+
+footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 1.4em;
+}
+footer div {
+  margin: 10px;
+  width: 70%;
+}
+footer div p {
+  margin: 5px;
+}
+
+* {
+  font-family: "times new roman", serif;
+}
+
+/*# sourceMappingURL=main.css.map */

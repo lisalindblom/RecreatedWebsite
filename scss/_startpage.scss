@@ -1,0 +1,73 @@
+@use "mixins";
+
+
+
+.start {
+    @include mixins.background ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    
+    nav {
+        background-color: rgba(250, 235, 215, 0.43);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+
+        @include mixins.desktop;
+
+        a {
+            @include mixins.a-links;
+        }
+}
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        
+        font-size: 1.7em;
+        width: 85%;
+        height: 35vh;
+
+        h2 {
+            @include mixins.rubriker;
+        }
+        
+    }
+    
+    .arrow {
+        
+        justify-self: flex-end;
+        align-self:center;
+        height: 5vh;
+        a {
+            @include mixins.a-links;
+        }
+       
+    }
+
+
+}
+
+
+
+/*nav {
+    background-color: rgba(250, 235, 215, 0.175);
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    align-items: center;
+    justify-self: flex-start;
+    a {
+        text-decoration: none;
+        font-size: 1.5em ;    
+        color: white;
+        padding: 2%;
+    }
+}*/

@@ -1,0 +1,32 @@
+
+@mixin background {
+      
+    background-image: url("/assets/forest.jpg") ;
+    background-color: darkolivegreen; /* backup om bild ej tillgänglig*/
+    background-position: center, bottom ;
+    background-size:  cover;
+    background-repeat: no-repeat;
+}
+
+@mixin a-links {
+    text-decoration: none;
+    font-size: 1.5em ;    
+    color: white;
+}
+
+@mixin rubriker {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+@mixin tablet {
+    @media screen and (min-width: 786px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+    }
+}
