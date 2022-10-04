@@ -16,7 +16,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
         width: 100%;
 
         @include mixins.desktop;
@@ -43,7 +42,7 @@
     
     .arrow {
         
-        
+         
         align-self:center;
         height: 5vh;
 
