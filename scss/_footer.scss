@@ -12,11 +12,25 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
 
-    @include mixins.desktop;
+    @include mixins.desktop {
+        flex-direction: row;
+        align-items: baseline;
+        padding-left: 100px;
+        padding-right: 100px;
+        font-size: 1.2em;
+        
+        
+    }
 
     div {
         margin: 10px;
         width: 70%;
+
+        @include mixins.desktop {
+            width: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
 
         p {
             margin: 5px;

@@ -18,7 +18,9 @@
     margin-bottom: 30px;
     padding: 30px;
     text-decoration: none;
-    font-size: 1.5em ; 
+    font-size: 1.7em ; 
+    margin: 20px;
+    
 }
 
 @mixin rubriker {
@@ -34,6 +36,6 @@
 
 @mixin desktop {
     @media screen and (min-width: 1200px) {
-        flex-direction: row;
+        @content;
     }
 }
