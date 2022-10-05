@@ -1,0 +1,128 @@
+   @use "mixins";
+   
+  .header .header-items li .list-item:hover,
+  .header .menu-btn:hover {
+    text-decoration: underline;
+  }
+
+  .header {
+    
+    width: 100%;
+    background-color: rgba(250, 235, 215, 0.192);
+    padding-right: 10px;
+
+    @include mixins.desktop {
+        
+        flex-direction: row;
+        justify-content: right;
+        font-size: 0.8em;
+        height: 7%;
+    }
+
+    a {
+        @include mixins.a-links;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+
+    .header-items {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      list-style: none;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.047);
+      clear: both;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+      
+
+      li .list-item {
+        
+        text-decoration: none;
+        
+        color: white;
+        display: block;
+        padding: 20px 20px;
+        text-decoration: none;
+        
+        /****
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        ****/
+      }
+    }
+
+    
+    .menu-icon {
+      cursor: pointer;
+      float: right;
+      padding: 28px 20px;
+      position: relative;
+
+      .navicon {
+        background: rgb(255, 255, 255);
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background 0.2s ease-out;
+        width: 18px;
+
+        &:active {
+          display: block;
+          background-color: rgb(0, 153, 255);
+        }
+      }
+    }
+    .menu-btn {
+      display: none;
+    }
+  }
+
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+
+  .header .menu-btn:checked ~ .header-items {
+    max-height: 240px;
+  }
+
+  /*****
+  .header .menu-btn:checked ~ .nav-items {
+    max-height: 240px;
+  }
+  ****/
+
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;}
