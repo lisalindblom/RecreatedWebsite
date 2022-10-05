@@ -47,25 +47,25 @@
         
     }
     
-    .arrow {
-        
-         
-        align-self:center;
-        height: 5vh;
-
-        a {
-            @include mixins.arrows;
-            color: white;
-
-        }
-
-        
-       
-    }
-
-
+    
+    
 }
 
+.arrow {
+    
+     
+    align-self:center;
+    height: 5vh;
+
+    a {
+        @include mixins.arrows;
+        color: white;
+
+    }
+
+    
+   
+}
 
 
 /*nav {

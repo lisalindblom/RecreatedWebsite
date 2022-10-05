@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    h2 {
+        @include mixins.rubriker; 
+    }
 
     .laget {
 
@@ -18,10 +22,6 @@
         }
 
         
-        h2 {
-            @include mixins.rubriker; /* Blir fel font-size*/
-            margin: 20px;
-        }
         
         .personal {
             display: flex;
@@ -78,9 +78,9 @@
         @include mixins.arrows;
         color: black;
 
-        i {
+       /* i {
             margin: 30px;
-        }
+        }*/
     }
 
 }

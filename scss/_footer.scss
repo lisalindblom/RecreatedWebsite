@@ -8,11 +8,12 @@ footer {
     justify-content: space-around;
     align-items: center;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.4em;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 10%;
 
-    @include mixins.desktop {
+    @include mixins.tablet {
         flex-direction: row;
         align-items: baseline;
         padding-left: 100px;
@@ -34,6 +35,12 @@ footer {
 
         p {
             margin: 5px;
+        }
+
+        .fa {
+            margin-left: 3px;
+            margin-right: 12px;
+
         }
 
         a {
