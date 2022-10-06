@@ -7,17 +7,10 @@
 
   .header {
     
+    position: absolute;
     width: 100%;
     background-color: rgba(250, 235, 215, 0.192);
     padding-right: 10px;
-
-    @include mixins.desktop {
-        
-        flex-direction: row;
-        justify-content: right;
-        font-size: 0.8em;
-        height: 7%;
-    }
 
     a {
         @include mixins.a-links;
@@ -36,23 +29,18 @@
       clear: both;
       max-height: 0;
       transition: max-height 0.2s ease-out;
+
+
       
 
       li .list-item {
         
         text-decoration: none;
-        
         color: white;
         display: block;
-        padding: 20px 20px;
+        padding: 2px 2px;
         text-decoration: none;
         
-        /****
-          &:hover {
-            cursor: pointer;
-            text-decoration: underline;
-          }
-        ****/
       }
     }
 
@@ -105,11 +93,7 @@
     max-height: 240px;
   }
 
-  /*****
-  .header .menu-btn:checked ~ .nav-items {
-    max-height: 240px;
-  }
-  ****/
+  
 
   .header .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
@@ -126,3 +110,40 @@
   .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
   .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;}
+
+
+    @include mixins.tablet {
+      
+      
+      .header{
+
+        display: flex;
+        justify-content: end;
+        font-size: 0.8em;
+        height: 7%;
+
+      }
+
+      .header li {
+
+        float: left;
+        padding: left 20px; ;
+        padding-right: 20px;
+        padding-top: 5px;
+        font-size: 1.1em;
+        
+        
+      }
+
+      .header .header-items {
+        clear: none;
+        float: right;
+        max-height: none;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .header .menu-icon {
+        display: none;
+      }
+  }
